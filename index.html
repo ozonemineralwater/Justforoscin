@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Oscinlivia 💕</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      font-weight: normal;
+      color: #555;
+    }
+
+    button {
+      padding: 15px 35px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    .no {
+      background: #eee;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h1>Oscinliavia 💖</h1>
+    <h2>Will you be my Valentine?</h2>
+    <button class="yes" onclick="yesClick()">Yes 💕</button>
+    <button class="no" onmouseover="moveNo()">No 🙃</button>
+  </div>
+
+  <script>
+    function yesClick() {
+      document.body.innerHTML = `
+        <div style="
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          height:100vh;
+          background:#ffccd5;
+          font-family:Arial;
+          text-align:center;">
+          <h1>Yayyy! ❤️🥰<br>
+          Oscinlivia, you just made me the happiest person!</h1>
+        </div>`;
+    }
+
+    function moveNo() {
+      const btn = document.querySelector('.no');
+      btn.style.position = 'absolute';
+      btn.style.left = Math.random() * (window.innerWidth - 120) + 'px';
+      btn.style.top = Math.random() * (window.innerHeight - 60) + 'px';
+    }
+  </script>
+
+</body>
+</html>
